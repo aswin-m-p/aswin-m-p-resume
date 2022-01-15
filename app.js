@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-const port = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 app.set('view engine','ejs');
 app.set('views','./src/views');
 app.use(express.static('public'));
-app.listen(port,function(){
-    console.log("server is active on port"+port);
-})
+app.listen(PORT, function() {
+    console.log("server active on port"+PORT);
+});
 app.get('/',function(req,res){
     res.render("index");
 });
